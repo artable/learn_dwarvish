@@ -1,0 +1,219 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Lesson 1</title>
+</head>
+<body>
+    <div class="content-box">
+        <h1 id="text-buffer">SPEAK FRIEND AND ENTER</h1>
+        <section class="row1">
+            <button id="16A2">&#x16A2</button>
+            <button id="16B1">&#x16B1</button>
+            <button id="16B3">&#x16B3</button>
+            <button id="16A8">&#x16A8</button>
+            <button id="16BA">&#x16BA</button>
+            <button id="16BB">&#x16BB</button>
+            <button id="16E9">&#x16E9</button>
+            <button id="16A0">&#x16A0</button>
+            <button id="16E6">&#x16E6</button>
+            <button id="16C1">&#x16C1</button>
+        </section>
+        <section class="row2">
+            <button id="16AD">&#x16AD</button>
+            <button id="16B4">&#x16B4</button>
+            <button id="16C5">&#x16C5</button>
+            <button id="16D2">&#x16D2</button>
+            <button id="16C9">&#x16C9</button>
+            <button id="16A3">&#x16A3</button>
+            <button id="16B9">&#x16B9</button>
+            <button id="16A9">&#x16A9</button>
+            <button id="16CF">&#x16CF</button>
+            <button id="16B2">&#x16B2</button>
+            <button id="16DA">&#x16DA</button>
+        </section>
+    
+        <section class="row3">
+            <button id="16DF">&#x16DF</button>
+            <button id="16DD">&#x16DD</button>
+            <button id="16B7">&#x16B7</button>
+            <button id="16C4">&#x16C4</button>
+            <button id="16CB">&#x16CB</button>
+            <button id="16E3">&#x16E3</button>
+            <button id="16BF">&#x16BF</button>
+            <button id="16DE">&#x16DE</button>
+            <button id="16EF">&#x16EF</button>
+            <button id="16D0">&#x16D0</button>
+            <button id="16C7">&#x16C7</button>
+            <button id="16E7">&#x16E7</button>
+        </section>
+    
+        <section class="row4">
+            <button id="16EB">&#x16EB</button>
+            <button id="16EC">&#x16EC</button>
+        </section>
+    
+    </div>
+
+    <script>
+        //keyboard control
+        let textBuffer = "";
+        
+        function pushToBuffer() {
+            $("#text-buffer").text(textBuffer)
+        }
+        $("#16A2").click(function(){
+            textBuffer += '\u16A2'; 
+            pushToBuffer();
+        });
+        $("#16B1").click(function(){
+            textBuffer += '\u16B1'; 
+            pushToBuffer();
+        });
+        $("#16B3").click(function(){
+            textBuffer += '\u16B3'; 
+            pushToBuffer();
+        });
+        $("#16A8").click(function(){
+            textBuffer += '\u16A8';
+            pushToBuffer();
+        });
+        $("#16BA").click(function(){
+            textBuffer += '\u16BA';
+            pushToBuffer();
+        });
+        $("#16BB").click(function(){
+            textBuffer += '\u16BB';
+            pushToBuffer();
+        });
+        $("#16E9").click(function(){
+            textBuffer += '\u16E9';
+            pushToBuffer();
+        });
+        $("#16A0").click(function(){
+            textBuffer += '\u16A0';
+            pushToBuffer();
+        });
+        $("#16E6").click(function(){
+            textBuffer += '\u16E6';
+            pushToBuffer();
+        });
+        $("#16C1").click(function(){
+            textBuffer += '\u16C1';
+            pushToBuffer();
+        });
+        $("#16AD").click(function(){
+            textBuffer += '\u16AD';
+            pushToBuffer();
+        });
+        $("#16B4").click(function(){
+            textBuffer += '\u16B4';
+            pushToBuffer();
+        });
+        $("#16C5").click(function(){
+            textBuffer += '\u16C5';
+            pushToBuffer();
+        });
+        $("#16D2").click(function(){
+            textBuffer += '\u16D2';
+            pushToBuffer();
+        });
+        $("#16C9").click(function(){
+            textBuffer += '\u16C9';
+            pushToBuffer();
+        });
+        $("#16A3").click(function(){
+            textBuffer += '\u16A3';
+            pushToBuffer();
+        });
+        $("#16B9").click(function(){
+            textBuffer += '\u16B9';
+            pushToBuffer();
+        });
+        $("#16A9").click(function(){
+            textBuffer += '\u16A9';
+            pushToBuffer();
+        });
+        $("#16CF").click(function(){
+            textBuffer += '\u16CF';
+            pushToBuffer();
+        });
+        $("#16B2").click(function(){
+            textBuffer += '\u16B2';
+            pushToBuffer();
+        });
+        $("#16DA").click(function(){
+            textBuffer += '\u16DA';
+            pushToBuffer();
+        });
+        $("#16DF").click(function(){
+            textBuffer += '\u16DF';
+            pushToBuffer();
+        });
+        $("#16DD").click(function(){
+            textBuffer += '\u16DD';
+            pushToBuffer();
+        });
+        $("#16B7").click(function(){
+            textBuffer += '\u16B7';
+            pushToBuffer();
+        });
+        $("#16C4").click(function(){
+            textBuffer += '\u16C4';
+            pushToBuffer();
+        });
+        $("#16CB").click(function(){
+            textBuffer += '\u16CB';
+            pushToBuffer();
+        });
+        $("#16E3").click(function(){
+            textBuffer += '\u16E3';
+            pushToBuffer();
+        });
+        $("#16BF").click(function(){
+            textBuffer += '\u16BF';
+            pushToBuffer();
+        });
+        $("#16DE").click(function(){
+            textBuffer += '\u16DE';
+            pushToBuffer();
+        });
+        $("#16EF").click(function(){
+            textBuffer += '\u16EF';
+            pushToBuffer();
+        });
+        $("#16D0").click(function(){
+            textBuffer += '\u16D0';
+            pushToBuffer();
+        });
+        $("#16C7").click(function(){
+            textBuffer += '\u16C7';
+            pushToBuffer();
+        });
+        $("#16E7").click(function(){
+            textBuffer += '\u16E7';
+            pushToBuffer();
+        });
+        $("#16EB").click(function(){
+            textBuffer += '\u16EB'; 
+            pushToBuffer();
+        });
+        $("#16EC").click(function(){
+            textBuffer += '\u16EC'; 
+            pushToBuffer();
+        });
+        </script>
+
+    <!-- <div class="input">
+        <textarea class="use-keyboard-input" ></textarea>
+        <button class="submit" type="submit" name="submit">Check</button>
+    </div> -->
+</body>
+</html>
