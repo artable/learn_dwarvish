@@ -7,7 +7,7 @@ import Contact from './Contact';
 const Home = () => {
   return (
     <section className="Home">
-      <h1>This is the homepage</h1>
+      <h1>Learn Cirth</h1>
 
       <Navbar />
     </section>
