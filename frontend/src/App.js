@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import QuizMain from "./components/Quiz/QuizMain";
+import Data from "./components/Language/Data";
  
 class App extends Component {
   constructor(props) {
@@ -26,9 +28,12 @@ class App extends Component {
   }
   }
   renderItems = () => {
-    console.log(this.state.charList);
 
-  };
+    const one = this.state.charList.map(element => {
+      return element.dwarvish;
+    });
+
+  }
  
   render() {
     return (
@@ -38,6 +43,8 @@ class App extends Component {
           <div className="card p-3">
             <ul className="list-group list-group-flush">
               {this.renderItems()}
+              <QuizMain/>
+              <Data/>
             </ul>
           </div>
         </div>
