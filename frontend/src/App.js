@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import QuizMain from "./components/Quiz/QuizMain";
 import Data from "./components/Language/Data";
  
 class App extends Component {
@@ -43,7 +42,6 @@ class App extends Component {
           <div className="card p-3">
             <ul className="list-group list-group-flush">
               {this.renderItems()}
-              <QuizMain/>
               <Data/>
             </ul>
           </div>

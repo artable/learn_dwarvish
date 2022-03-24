@@ -5,56 +5,46 @@ import './QuizMain.css';
 
 export default class Quiz extends Component {
 
-    
-
-    dwarvish = this.state.charList.map(element => {
-        return element.dwarvish;
-    });
-
-    english = this.state.charList.map(element => {
-        return element.dwarvish;
-    });
-
     // initiating the local state
     state = {
         quiestions: {
-            1: `What does this english character translates to ${english[0]}?`,
-            2: `What does this english character translates to ${english[1]}?`,
-            3: `What does this english character translates to ${english[2]}?`,
-            4: `What does this english character translates to ${english[3]}?`,
-            5: `What does this english character translates to ${english[4]}?`,
-            6: `What does this english character translates to ${english[5]}?`,
+            1: 'Which one is the letter A?',
+            2: 'Which one is the letter B?',
+            3: 'Which one is the letter C?',
+            4: 'Which one is the letter D?',
+            5: 'Which one is the letter E?',
+            6: 'Which one is the letter F?',
         },
         answers: {
             1: {
-                1: `${dwarvish[0]}`,
-                2: `${dwarvish[1]}`,
-                3: `${dwarvish[2]}`,
+                1: 'A',
+                2: 'T',
+                3: 'F'
             },
             2: {
-                1: `${dwarvish[3]}`,
-                2: `${dwarvish[4]}`,
-                3: `${dwarvish[5]}`
+                1: 'D',
+                2: 'P',
+                3: 'B'
             },
             3: {
-                1: `${dwarvish[6]}`,
-                2: `${dwarvish[7]}`,
-                3: `${dwarvish[8]}`
+                1: 'D',
+                2: 'C',
+                3: 'Y'
             },
             4: {
-                1: `${dwarvish[9]}`,
-                2: `${dwarvish[10]}`,
-                3: `${dwarvish[11]}`
+                1: 'D',
+                2: 'W',
+                3: 'A'
             },
             5: {
-                1: `${dwarvish[12]}`,
-                2: `${dwarvish[13]}`,
-                3: `${dwarvish[14]}`
+                1: 'K',
+                2: 'E',
+                3: 'O'
             },
             6: {
-                1: `${dwarvish[15]}`,
-                2: `${dwarvish[16]}`,
-                3: `${dwarvish[17]}`
+                1: 'E',
+                2: 'F',
+                3: 'P'
             },
         },
         correctAnswers: {
@@ -89,13 +79,13 @@ export default class Quiz extends Component {
     }
 
     // method to move to the next question
-    nextStep = (step) => {
-        this.setState({
-            step: step + 1,
-            correctAnswer: 0,
-            clickedAnswer: 0
-        });
-    }
+    // nextStep = (step) => {
+    //     this.setState({
+    //         step: step + 1,
+    //         correctAnswer: 0,
+    //         clickedAnswer: 0
+    //     });
+    // }
 
     render(){
         let { quiestions, answers, correctAnswer, clickedAnswer, step, score } = this.state;
