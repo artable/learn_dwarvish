@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import QuizMain from "./components/Quiz/QuizMain";
 import Data from "./components/Language/Data";
- 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -25,31 +25,21 @@ class App extends Component {
       console.log("failed to fetch");
       console.log(e);
       console.log(this.state);
+    }
   }
+  create_dummy() {
+    let character = 'a';
+    return character
   }
-  renderItems = () => {
 
-    const one = this.state.charList.map(element => {
-      return element.dwarvish;
-    });
-
-  }
- 
   render() {
     return (
-      <main className="content">
-      <div className="row">
-        <div className="col-md-6 col-sm-10 mx-auto p-0">
-          <div className="card p-3">
-            <ul className="list-group list-group-flush">
-              {this.renderItems()}
-              <QuizMain/>
-              <Data/>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </main>
+      <div>{this.state.charList.map(listElement =>
+        (<QuizMain
+        question={listElement.dwarvish}
+        answer={listElement.english}
+        dummy={[this.create_dummy(), this.create_dummy]}
+      />))}</div>
     )
   }
 }
