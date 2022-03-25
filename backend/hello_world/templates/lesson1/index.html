@@ -24,15 +24,17 @@
             <button id="16E9">&#x16E9</button>
             <button id="16A0">&#x16A0</button>
             <button id="16E6">&#x16E6</button>
+            <button id="16E7">&#x16E7</button>
             <button id="16C1">&#x16C1</button>
+            <button id="16AD">&#x16AD</button>
         </section>
         <section class="row2">
-            <button id="16AD">&#x16AD</button>
             <button id="16B4">&#x16B4</button>
             <button id="16C5">&#x16C5</button>
             <button id="16D2">&#x16D2</button>
             <button id="16C9">&#x16C9</button>
             <button id="16A3">&#x16A3</button>
+            <button id="16A4">&#x16A4</button>
             <button id="16B9">&#x16B9</button>
             <button id="16A9">&#x16A9</button>
             <button id="16CF">&#x16CF</button>
@@ -43,20 +45,22 @@
         <section class="row3">
             <button id="16DF">&#x16DF</button>
             <button id="16DD">&#x16DD</button>
-            <button id="16B7">&#x16B7</button>
+            <button id="16D5">&#x16D5</button>
             <button id="16C4">&#x16C4</button>
             <button id="16CB">&#x16CB</button>
             <button id="16E3">&#x16E3</button>
             <button id="16BF">&#x16BF</button>
             <button id="16DE">&#x16DE</button>
             <button id="16EF">&#x16EF</button>
+            <button id="16B7">&#x16B7</button>
             <button id="16D0">&#x16D0</button>
             <button id="16C7">&#x16C7</button>
-            <button id="16E7">&#x16E7</button>
         </section>
     
         <section class="row4">
             <button id="16EB">&#x16EB</button>
+            <button id="Backspace">&#8592</button>
+            <button id="Clear">Clear</button>
             <button id="16EC">&#x16EC</button>
         </section>
     
@@ -208,6 +212,22 @@
         $("#16EC").click(function(){
             textBuffer += '\u16EC'; 
             pushToBuffer();
+        });
+        $("#16D5").click(function(){
+            textBuffer += '\u16D5'; 
+            pushToBuffer();
+        });
+        $("#16A4").click(function(){
+            textBuffer += '\u16A4'; 
+            pushToBuffer();
+        });
+        $("#Backspace").click(function(){
+            $('#text-buffer').children().last().remove();
+        });
+        $("#Clear").click(function(){
+            textBuffer = '';
+            pushToBuffer();
+            // $('#text-buffer').empty();
         });
         </script>
 
