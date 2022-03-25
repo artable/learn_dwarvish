@@ -14,20 +14,6 @@ const Navbar = () => {
           <li><Link to='/contact'>Contact</Link></li>
         </ul>
       </body>
-
-
-
-      {/* <section>
-        <Link to='/'>Home</Link>
-      </section>
-
-      <section>
-        <Link to='/about-us'>About</Link>
-      </section>
-
-      <section>
-        <Link to='/contact'>Contact</Link>
-      </section> */}
     </section>
   );
 }
