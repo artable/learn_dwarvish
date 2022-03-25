@@ -8,3 +8,5 @@ const Quiz1 = () => {
         </section>
     )
 }
+
+export default Quiz1;
