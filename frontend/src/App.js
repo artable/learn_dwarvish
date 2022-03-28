@@ -1,14 +1,20 @@
 import React, { Component } from "react"
 import QuizMain from "./components/Quiz/QuizMain";
+import SingleCharacter from "./SingleCharacter"
 import Data from "./components/Language/Data";
- 
+
 class App extends Component {
   constructor(props) {
     super(props);
+    this.showNext = this.showNext.bind(this);
+    this.createDummy = this.createDummy.bind(this);
+
     this.state = {
       activeItem: {
+        index: 0,
         english: "",
         cirth: "",
+        dummy: [],
       },
       charList: []
       };
@@ -18,40 +24,50 @@ class App extends Component {
     try {
       const res = await fetch('http://localhost:8000/api/all');
       const charList = await res.json();
+      //TODO this is hecka gross and should be factored into a seperate method
+      //even if initialization has to be handled seperate everytime
+      let activeItem = {};
+      activeItem.english = charList[0].english;
+      activeItem.cirth = charList[0].dwarvish;
+      activeItem.index = 0;
+      activeItem.dummy = [this.createDummy(), this.createDummy()];
       this.setState({
+        activeItem,
         charList
-      });
+      })
     } catch (e) {
-      console.log("failed to fetch");
       console.log(e);
       console.log(this.state);
+    }
   }
+  createDummy() {
+    let character = '+';
+    return character
   }
-  renderItems = () => {
 
-    const one = this.state.charList.map(element => {
-      return element.dwarvish;
-    });
-
+  showNext() {
+    let next = this.state.charList[this.state.activeItem.index + 1];
+    let newActiveItem = {
+      index: this.state.activeItem.index + 1,
+      english: next.english,
+      cirth: next.dwarvish,
+      dummy: [this.createDummy(), this.createDummy()]
+    };
+    this.setState({activeItem: newActiveItem});
+    console.log(this.state.activeItem);
   }
- 
+
   render() {
     return (
-      <main className="content">
-      <div className="row">
-        <div className="col-md-6 col-sm-10 mx-auto p-0">
-          <div className="card p-3">
-            <ul className="list-group list-group-flush">
-              {this.renderItems()}
-              <QuizMain/>
-              <Data/>
-            </ul>
-          </div>
-        </div>
+      <div>
+        <SingleCharacter
+        question={this.state.activeItem.cirth}
+        answer={this.state.activeItem.english}
+        dummy={this.state.activeItem.dummy}/>
+        <button onClick={this.showNext}>Next!</button>
       </div>
-    </main>
     )
   }
 }
-  
+
 export default App;
