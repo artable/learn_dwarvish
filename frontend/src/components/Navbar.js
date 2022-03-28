@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './Navbar.css'
 
 const Navbar = () => {
+  // const aboutUsApi = 'api/about-us'
   return (
     <section className='navbar'>
       <body>
@@ -10,7 +11,7 @@ const Navbar = () => {
 
         <ul>
           <li><Link to='/'>Home</Link></li>
-          <li><Link to='/about-us'>About us</Link></li>
+          <li><Link to='/about-us' state={{api: 'api/stuff'}}>About us</Link></li>
           <li><Link to='/contact'>Contact</Link></li>
         </ul>
       </body>

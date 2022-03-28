@@ -10,15 +10,13 @@ import {
  
 const App = () => {
   return (
-    <section className="App">
-      <Router>
-        <Routes>
-          <Route exact path='/' element={<Home/>}/>
-          <Route exact path='/about-us' element={<About/>}/>
-          <Route exact path='/contact' element={<Contact/>}/>
-        </Routes>
-      </Router>
-    </section>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<Home/>}/>
+        <Route exact path='/about-us' element={<About/>}/>
+        <Route exact path='/contact' element={<Contact/>}/>
+      </Routes>
+    </Router>
   );
 };
    
