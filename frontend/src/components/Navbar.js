@@ -6,7 +6,7 @@ const Navbar = () => {
   // const aboutUsApi = 'api/about-us'
   return (
     <section className='navbar'>
-      <body>
+      <section>
         <h1 className='header'>Navigation</h1>
 
         <ul>
@@ -17,7 +17,7 @@ const Navbar = () => {
           <li><Link to='/lesson2'>Lesson 2</Link></li>
           <li><Link to='/lesson3'>Lesson 3</Link></li>
         </ul>
-      </body>
+      </section>
     </section>
   );
 }
