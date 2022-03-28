@@ -4,9 +4,8 @@ import Navbar from "../Navbar";
 const Contact = () => {
     return (
         <section className="Contact">
-            <h1>This is the Contact page</h1>
-
             <Navbar />
+            <h1>This is the Contact page</h1>
         </section>
     );
 };

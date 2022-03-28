@@ -11,9 +11,8 @@ function About () {
 
   return (
     <section className="About">
-      <h1>This is the about page</h1>
-
       <Navbar />
+      <h1>This is the about page</h1>
     </section>
   );
 };
