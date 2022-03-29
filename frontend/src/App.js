@@ -11,7 +11,7 @@ class App extends Component {
 
     this.state = {
       activeItem: {
-        index: 0,
+        index: -1,
         english: "",
         cirth: "",
         dummy: [],
@@ -33,18 +33,22 @@ class App extends Component {
       activeItem.index = 0;
       activeItem.dummy = [this.createDummy(), this.createDummy()];
       this.setState({ activeItem })
-      // console.log(this.state);
+
     } catch (e) {
       console.log(e);
       console.log(this.state);
     }
   }
-  
+
+
+
+
   createDummy() {
     return this.state.charList[Math.floor(Math.random() * (this.state.charList.length - 1))].dwarvish;
   }
 
   childCallback = event => {
+    console.log("callback")
     let charList = this.state.charList;
     charList[this.state.activeItem.index].gotCorrect = event.target.value;
     this.setState(
@@ -62,7 +66,7 @@ class App extends Component {
       dummy: [this.createDummy(), this.createDummy()]
     };
 
-    while (
+    while ( //Everyone loves a good bogosort
       newActiveItem.dummy[0] == newActiveItem.dummy[1] || 
       newActiveItem.dummy[0] == newActiveItem.cirth ||
       newActiveItem.dummy[1] == newActiveItem.cirth
@@ -74,7 +78,8 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.charList[0]);
+    //console.log("render");
+    console.log(this.state.charList[this.state.activeItem.index - 1])
     return (
       <div>
         <SingleCharacter
