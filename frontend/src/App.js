@@ -8,6 +8,7 @@ class App extends Component {
     super(props);
     this.showNext = this.showNext.bind(this);
     this.createDummy = this.createDummy.bind(this);
+    this.returnScore = this.returnScore.bind(this);
 
     this.state = {
       activeItem: {
@@ -46,7 +47,7 @@ class App extends Component {
 
   childCallback = event => {
     let charList = this.state.charList;
-    charList[this.state.activeItem.index].gotCorrect = event.target.value;
+    charList[this.state.activeItem.index].isCorrect = event.target.value;
     this.setState(
       {charList}
     );
@@ -54,27 +55,47 @@ class App extends Component {
   }
   
   showNext() {
-    let next = this.state.charList[this.state.activeItem.index + 1];
-    let newActiveItem = {
-      index: this.state.activeItem.index + 1,
-      english: next.english,
-      cirth: next.dwarvish,
-      dummy: [this.createDummy(), this.createDummy()]
-    };
+    if (this.state.activeItem.index >= this.state.charList.length - 1) {
+      this.returnScore();
+    } else {
+      let next = this.state.charList[this.state.activeItem.index + 1];
+      let newActiveItem = {
+        index: this.state.activeItem.index + 1,
+        english: next.english,
+        cirth: next.dwarvish,
+        dummy: [this.createDummy(), this.createDummy()]
+      };
 
-    while (
-      newActiveItem.dummy[0] == newActiveItem.dummy[1] || 
-      newActiveItem.dummy[0] == newActiveItem.cirth ||
-      newActiveItem.dummy[1] == newActiveItem.cirth
-    ) {
-      newActiveItem.dummy = [this.createDummy(), this.createDummy()]
+      console.log(newActiveItem.index);
+    
+      while (
+        newActiveItem.dummy[0] == newActiveItem.dummy[1] || 
+        newActiveItem.dummy[0] == newActiveItem.cirth ||
+        newActiveItem.dummy[1] == newActiveItem.cirth
+        ) {
+          newActiveItem.dummy = [this.createDummy(), this.createDummy()]
+        };
+        
+        this.setState({activeItem: newActiveItem});
     }
+  }
 
-    this.setState({activeItem: newActiveItem});
+  returnScore() {
+    console.log(this.state.charList);
+    let correctAmount = 0;
+    let incorrectAmount = 0;
+    for (let i = 0; i < this.state.charList.length; i++) {
+      if (this.state.charList[i].isCorrect == "true") {
+        correctAmount += 1;
+      }
+    }
+    incorrectAmount = 37 - correctAmount;
+    console.log("correct amount", correctAmount);
+    return [correctAmount, incorrectAmount];
   }
 
   render() {
-    console.log(this.state.charList[0]);
+    // console.log(this.state.charList[0]);
     return (
       <div>
         <SingleCharacter
