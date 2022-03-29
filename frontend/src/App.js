@@ -11,7 +11,7 @@ class App extends Component {
 
     this.state = {
       activeItem: {
-        index: -1,
+        index: -1, //maaagic
         english: "",
         cirth: "",
         dummy: [],
@@ -87,7 +87,6 @@ class App extends Component {
         answer={this.state.activeItem.english}
         dummy={this.state.activeItem.dummy}
         callback={this.childCallback}/>
-        <button onClick={this.showNext}>Next!</button>
       </div>
     )
   }

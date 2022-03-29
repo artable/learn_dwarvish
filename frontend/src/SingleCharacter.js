@@ -19,6 +19,7 @@ class SingleCharacter extends Component {
   render() {
     return (
       <div>
+        <h1>{this.props.question}</h1>
         <button onClick={this.props.callback} value={this.isCorrect(this.props.answer)}>{this.props.answer}</button>
         <button onClick={this.props.callback} value={this.isCorrect(this.props.dummy[0])}>{this.props.dummy[0]}</button>
         <button onClick={this.props.callback} value={this.isCorrect(this.props.dummy[1])}>{this.props.dummy[1]}</button>
