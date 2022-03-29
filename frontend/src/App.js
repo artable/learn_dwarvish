@@ -42,8 +42,6 @@ class App extends Component {
   
   createDummy() {
     return this.state.charList[Math.floor(Math.random() * (this.state.charList.length - 1))].dwarvish;
-    let character = '+';
-    return character;
   }
 
   childCallback = event => {
