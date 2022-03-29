@@ -100,7 +100,7 @@ class QuestionHandler extends Component {
         answer={this.state.activeItem.english}
         dummy={this.state.activeItem.dummy}
         callback={this.childCallback}/>
-        <button onClick={this.showNext}>Next!</button>
+        {/* <button onClick={this.showNext}>Next!</button> */}
       </div>
     )
   }
