@@ -21,8 +21,24 @@ from dwarvish_app import views
 all_chars_r = routers.DefaultRouter()
 all_chars_r.register(r'all',views.CharAll, 'all')
 
+vowels_chars = routers.DefaultRouter()
+vowels_chars.register(r'vowels',views.CharVowels, 'vowels')
+
+char_cons_one = routers.DefaultRouter()
+char_cons_one.register(r'cons_one',views.CharConsOne, 'cons_one')
+
+comp_cons = routers.DefaultRouter()
+comp_cons.register(r'comp_cons',views.CharCompCons, 'comp_cons')
+
+cons_three = routers.DefaultRouter()
+cons_three.register(r'cons_three',views.CharConsThree, 'cons_three')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('dwarvish_app.urls')),
-    path('api/', include(all_chars_r.urls))
+    path('api/', include(all_chars_r.urls)),
+    path('api/', include(vowels_chars.urls)),
+    path('api/', include(char_cons_one.urls)),
+    path('api/', include(comp_cons.urls)),
+    path('api/', include(cons_three.urls))
 ]
