@@ -49,7 +49,6 @@ class App extends Component {
   }
 
   childCallback = event => {
-    console.log("callback")
     let charList = this.state.charList;
     charList[this.state.activeItem.index].isCorrect = event.target.value;
     this.setState(
@@ -69,8 +68,6 @@ class App extends Component {
         cirth: next.dwarvish,
         dummy: [this.createDummy(), this.createDummy()]
       };
-
-      console.log(newActiveItem.index);
     
       while (
         newActiveItem.dummy[0] == newActiveItem.dummy[1] || 
@@ -85,7 +82,6 @@ class App extends Component {
   }
 
   returnScore() {
-    console.log(this.state.charList);
     let correctAmount = 0;
     let incorrectAmount = 0;
     for (let i = 0; i < this.state.charList.length; i++) {
@@ -94,12 +90,10 @@ class App extends Component {
       }
     }
     incorrectAmount = 37 - correctAmount;
-    console.log("correct amount", correctAmount);
     return [correctAmount, incorrectAmount];
   }
 
   render() {
-    //console.log("render");
     console.log(this.state.charList[this.state.activeItem.index - 1])
     return (
       <div>
