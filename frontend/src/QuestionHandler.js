@@ -19,21 +19,6 @@ class QuestionHandler extends Component {
       charList: props.charList
       };
   }
-  // componentDidMount() {
-  //   console.log("CDM");
-
-  //   console.log(this.props.charList);
-  //   console.log("CDM END")
-
-  //   let charList = this.props.charList;
-  //   this.setState({ charList });
-    // let activeItem = {};
-    // activeItem.english = charList[0].english;
-    // activeItem.cirth = charList[0].dwarvish;
-    // activeItem.index = 0;
-    // activeItem.dummy = [this.createDummy(), this.createDummy()];
-    // this.setState({ activeItem })
-//}
 
   async componentDidMount() {
     try {
