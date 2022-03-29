@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import QuizMain from "./components/Quiz/QuizMain";
 import SingleCharacter from "./SingleCharacter"
 import Data from "./components/Language/Data";
 
