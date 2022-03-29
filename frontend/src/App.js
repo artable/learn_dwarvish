@@ -42,7 +42,16 @@ class App extends Component {
   }
   createDummy() {
     let character = '+';
-    return character
+    return character;
+  }
+
+  childCallback = event => {
+    let charList = this.state.charList;
+    charList[this.state.activeItem.index].gotCorrect = event.target.value;
+    this.setState(
+      {charList}
+    );
+    this.showNext();
   }
 
   showNext() {
@@ -58,16 +67,18 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.charList[0]);
     return (
       <div>
         <SingleCharacter
         question={this.state.activeItem.cirth}
         answer={this.state.activeItem.english}
-        dummy={this.state.activeItem.dummy}/>
+        dummy={this.state.activeItem.dummy}
+        callback={this.childCallback}/>
         <button onClick={this.showNext}>Next!</button>
       </div>
     )
   }
 }
 
-export default App;
+export default App; 
