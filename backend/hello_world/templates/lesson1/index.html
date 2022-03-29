@@ -69,6 +69,7 @@
     <script>
         //keyboard control
         let textBuffer = "";
+        let textBuffer2 = "";
         
         function pushToBuffer() {
             $("#text-buffer").text(textBuffer)
@@ -227,6 +228,8 @@
         $("#Clear").click(function(){
             textBuffer = '';
             pushToBuffer();
+            // textBuffer2 = 'SPEAK FRIEND AND ENTER';
+            // $("#text-buffer").text(textBuffer2);
             // $('#text-buffer').empty();
         });
         </script>
