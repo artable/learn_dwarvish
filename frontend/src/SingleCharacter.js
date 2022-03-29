@@ -10,7 +10,10 @@ class SingleCharacter extends Component {
 
   render() {
     return (
-      <h1 className="thing">{this.props.question}, {this.props.answer}, {this.props.dummy[0]}, {this.props.dummy[1]}</h1>
+      <div>
+        <h1 className="thing">{this.props.question}, {this.props.answer}, {this.props.dummy}</h1>
+        <button onClick={this.props.callback} value={false}>Nextchild</button>
+      </div>
     )
   }
 }

@@ -42,6 +42,17 @@ class App extends Component {
   
   createDummy() {
     return this.state.charList[Math.floor(Math.random() * (this.state.charList.length - 1))].dwarvish;
+    let character = '+';
+    return character;
+  }
+
+  childCallback = event => {
+    let charList = this.state.charList;
+    charList[this.state.activeItem.index].gotCorrect = event.target.value;
+    this.setState(
+      {charList}
+    );
+    this.showNext();
   }
   
   showNext() {
@@ -65,16 +76,18 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.charList[0]);
     return (
       <div>
         <SingleCharacter
-        question={this.state.activeItem.english}
-        answer={this.state.activeItem.cirth}
-        dummy={this.state.activeItem.dummy}/>
+        question={this.state.activeItem.cirth}
+        answer={this.state.activeItem.english}
+        dummy={this.state.activeItem.dummy}
+        callback={this.childCallback}/>
         <button onClick={this.showNext}>Next!</button>
       </div>
     )
   }
 }
 
-export default App;
+export default App; 
