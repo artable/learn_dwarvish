@@ -7,6 +7,7 @@ class QuestionHandler extends Component {
     this.showNext = this.showNext.bind(this);
     this.createDummy = this.createDummy.bind(this);
     this.returnScore = this.returnScore.bind(this);
+    console.log(this.props.api)
 
     this.state = {
       activeItem: {
@@ -15,13 +16,28 @@ class QuestionHandler extends Component {
         cirth: "",
         dummy: [],
       },
-      charList: []
+      charList: props.charList
       };
   }
- 
+  // componentDidMount() {
+  //   console.log("CDM");
+
+  //   console.log(this.props.charList);
+  //   console.log("CDM END")
+
+  //   let charList = this.props.charList;
+  //   this.setState({ charList });
+    // let activeItem = {};
+    // activeItem.english = charList[0].english;
+    // activeItem.cirth = charList[0].dwarvish;
+    // activeItem.index = 0;
+    // activeItem.dummy = [this.createDummy(), this.createDummy()];
+    // this.setState({ activeItem })
+//}
+
   async componentDidMount() {
     try {
-      const res = await fetch('http://localhost:8000/api/all');
+      const res = await fetch("http://localhost:8000/api/all");
       const charList = await res.json();
       //TODO this is hecka gross and should be factored into a seperate method
       //even if initialization has to be handled seperate everytime
@@ -38,9 +54,6 @@ class QuestionHandler extends Component {
       console.log(this.state);
     }
   }
-
-
-
 
   createDummy() {
     return this.state.charList[Math.floor(Math.random() * (this.state.charList.length - 1))].dwarvish;
@@ -92,12 +105,13 @@ class QuestionHandler extends Component {
   }
 
   render() {
-    console.log(this.state.charList[this.state.activeItem.index - 1])
+    // console.log(this.props.charList);
+    // console.log(this.state.charList);
     return (
       <div>
         <SingleCharacter
-        question={this.state.activeItem.cirth}
-        answer={this.state.activeItem.english}
+        question={this.state.activeItem.english}
+        answer={this.state.activeItem.cirth}
         dummy={this.state.activeItem.dummy}
         callback={this.childCallback}/>
         {/* <button onClick={this.showNext}>Next!</button> */}

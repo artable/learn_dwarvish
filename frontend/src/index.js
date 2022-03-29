@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
+import RouterLinks from './components/RouterLinks';
 import QuestionHandler from './QuestionHandler';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <QuestionHandler />
+    <RouterLinks />
+    {/* <QuestionHandler /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
