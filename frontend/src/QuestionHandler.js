@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import SingleCharacter from "./SingleCharacter"
-import Data from "./components/Language/Data";
 
 class QuestionHandler extends Component {
   constructor(props) {
