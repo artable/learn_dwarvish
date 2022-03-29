@@ -3,7 +3,7 @@ import QuizMain from "./components/Quiz/QuizMain";
 import SingleCharacter from "./SingleCharacter"
 import Data from "./components/Language/Data";
 
-class App extends Component {
+class QuestionHandler extends Component {
   constructor(props) {
     super(props);
     this.showNext = this.showNext.bind(this);
@@ -108,4 +108,4 @@ class App extends Component {
   }
 }
 
-export default App; 
+export default QuestionHandler; 
