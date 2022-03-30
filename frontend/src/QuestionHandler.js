@@ -22,7 +22,7 @@ class QuestionHandler extends Component {
 
   async componentDidMount() {
     try {
-      const res = await fetch("http://localhost:8000/api/all");
+      const res = await fetch("http://localhost:8000/api/vowels");
       const charList = await res.json();
       //TODO this is hecka gross and should be factored into a seperate method
       //even if initialization has to be handled seperate everytime
@@ -92,8 +92,8 @@ class QuestionHandler extends Component {
     return (
       <div>
         <Answer
-          question={this.state.activeItem.cirth}
-          answer={this.state.activeItem.english}
+          question={this.state.activeItem.english}
+          answer={this.state.activeItem.cirth}
           dummy={this.state.activeItem.dummy}
           callback={this.childCallback}
         />

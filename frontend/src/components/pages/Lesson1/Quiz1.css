@@ -1,0 +1,21 @@
+.header-quiz {
+    text-align: center;
+    padding: 4rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.link-quiz1 {
+    text-decoration: none;
+    background-color: #333333;
+    margin: 1rem;
+    padding: .75rem;
+    border-radius: 8px;
+    color: white;
+}
+
+.link-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

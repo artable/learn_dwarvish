@@ -7,7 +7,9 @@ const Navbar = () => {
   return (
     <section className='navbar'>
       <section>
-        <h1 className='header'>Navigation</h1>
+        <div className='header-box'>
+          <h1 className='header'>Learning Dwarvish</h1>
+        </div>
 
         <ul>
           <li><Link to='/'>Home</Link></li>

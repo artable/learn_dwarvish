@@ -1,7 +1,9 @@
+import J from '../../assets/images/J.png';
+
 const L2Teach = () => {
     return (
-        <div>
-            <h1>Lesson 2</h1>
+        <div className='content-wrap'>
+            <h1 className='lesson-header'>Lesson 2</h1>
             <p>
                 Lets start getting into the constonants. There will be some letters missing, and there
                 is good reason for that. Don't worry about that now, they will be taught in later 
@@ -18,23 +20,25 @@ const L2Teach = () => {
                 Lesson 2, as previously stated, will cover approximately the first half of the 
                 consonants in the alphabet.
             </p>
-            <ul>
-                <li>B = &#x16B1</li>
-                <li>D = &#x16A8</li>
-                <li>F = &#x16E9</li>
-                <li>G = &#x16A0</li>
-                <li>J = &#x16AD</li>
-                <li>K = &#x16B4</li>
-                <li>L = &#x16C5</li>
-                <li>M = &#x16D2</li>
-                <li>N = &#x16C9</li>
-            </ul>
+            <div className="dwarvish-characters-box">
+                <ul className='dwarvish-characters'>
+                    <li>B = &#x16B1;</li>
+                    <li>D = &#x16A8;</li>
+                    <li>F = &#x16E9;</li>
+                    <li>G = &#x16A0;</li>
+                    <li>J = &#x16AD;</li>
+                    <li>K = &#x16B4;</li>
+                    <li>L = &#x16C5;</li>
+                    <li>M = &#x16D2;</li>
+                    <li>N = &#x16C9;</li>
+                </ul>
+            </div>
             <p>
-                j is represented by the character "&#x16AD". Below is the actual character that
+                j is represented by the character "&#x16AD;". Below is the actual character that
                 is used in the language.
 
             </p>
-            <img class= "original" src = "assets/images/J.png" alt= "Original J"/>
+        <img class= "original" src ={J} alt= "Original J"/>
         </div>
     );
 }

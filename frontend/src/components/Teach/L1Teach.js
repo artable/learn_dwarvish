@@ -1,7 +1,10 @@
+import './L1Teach.css';
+import O from '../../assets/images/O.png'
+
 const L1Teach = () => {
     return (
-        <div>
-            <h1>Lesson 1</h1>
+        <div className='content-wrap'>
+            <h1 className='lesson-header'>Lesson 1</h1>
             <p>
                 Welcome to your first character lesson in the Fantasy language Dwarvish, 
                 aka Cirth, from the World of Middle Earth. The language was built off of a real
@@ -19,18 +22,20 @@ const L1Teach = () => {
                 So. Lesson 1. Lets start off simple and leave the complexity for later. Vowels:
                 The characters are as follows:
             </p>
-            <ul>
-                <li>A = &#x16A2</li>
-                <li>E = &#x16BA</li>
-                <li>I = &#x16C1</li>
-                <li>O = &#x16A3</li>
-                <li>U = &#x16DF</li>
-            </ul>
+            <div className="dwarvish-characters-box">
+                <ul className='dwarvish-characters'>
+                    <li>A = &#x16A2;</li>
+                    <li>E = &#x16BA;</li>
+                    <li>I = &#x16C1;</li>
+                    <li>O = &#x16A3;</li>
+                    <li>U = &#x16DF;</li>
+                </ul>
+            </div>
             <p>
-                O is represented by the character "&#x16A3". Below is the actual character that
+                O is represented by the character "&#x16A3;". Below is the actual character that
                 is used in the language.
             </p>
-            <img class= "original" src = "frontend\src\assets\images\O.png" alt= "Original O"/>
+            <img class= "original" src={O} alt= "Original O"/>
             <p>
                 Do your best to review these characters before moving on. This First quiz is a 
                 memory game of sorts. Have fun and good luck!

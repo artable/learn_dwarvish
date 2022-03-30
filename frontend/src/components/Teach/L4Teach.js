@@ -1,7 +1,7 @@
 const L4Teach = () => {
     return (
-        <div>
-            <h1>Lesson 4</h1>
+        <div className='content-wrap'>
+            <h1 className='lesson-header'>Lesson 4</h1>
             <p>
                 Welcome to Lesson 4, where things get INTERESTING! Here, we will introduce a few 
                 missing consonants, and explain why they are seperate. Pay attention, because the
@@ -27,8 +27,8 @@ const L4Teach = () => {
                 letter, either S or K.
             </p>
             <ul>
-                <li>Hard C, aka K = &#x16B4</li>
-                <li>Soft C, aka S = &#x16B2</li>
+                <li>Hard C, aka K = &#x16B4;</li>
+                <li>Soft C, aka S = &#x16B2;</li>
             </ul>
             <p>
                 Keep in mind, the S character used is still a substitution for the actual, mainly larger, 
@@ -45,8 +45,8 @@ const L4Teach = () => {
                 Cirth language, so it won't be super relevant for english speakers.
             </p>
             <ul>
-                <li>H = &#x16E6</li>
-                <li>Mod H = &#x16E7</li>
+                <li>H = &#x16E6;</li>
+                <li>Mod H = &#x16E7;</li>
             </ul>
             <p>
                 The character for a normal H is a subistute for the character shown below. The original
@@ -65,8 +65,8 @@ const L4Teach = () => {
                 impact your learning too much.
             </p>
             <ul>
-                <li>Q = &#x16A9</li>
-                <li>QU = &#x16A9</li>
+                <li>Q = &#x16A9;</li>
+                <li>QU = &#x16A9;</li>
             </ul>
             <p>
                 Q is another character on our list on nonexistant in the Runic library. Below is the
@@ -83,8 +83,8 @@ const L4Teach = () => {
                 called Soft X.
             </p>
             <ul>
-                <li>Hard X = &#x16B4&#x16B2</li>
-                <li>QU = &#x16E3</li>
+                <li>Hard X = &#x16B4;&#x16B2;</li>
+                <li>QU = &#x16E3;</li>
             </ul>
             <p>
                 The case with the letter S works here too. Refer to the instructions on C, or lesson 3
