@@ -30,7 +30,7 @@ const L1Teach = () => {
                 O is represented by the character "&#x16A3". Below is the actual character that
                 is used in the language.
             </p>
-            <img class= "original" src = "./assets/images/O.png" alt= "Original O"/>
+            <img class= "original" src = "frontend\src\assets\images\O.png" alt= "Original O"/>
             <p>
                 Do your best to review these characters before moving on. This First quiz is a 
                 memory game of sorts. Have fun and good luck!
