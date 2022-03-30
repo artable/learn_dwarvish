@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
-import App from './App';
-// import reportWebVitals from './reportWebVitals';
-import "bulma/css/bulma.min.css";
+import RouterLinks from './components/RouterLinks';
+import QuestionHandler from './QuestionHandler';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RouterLinks />
+    {/* <QuestionHandler /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

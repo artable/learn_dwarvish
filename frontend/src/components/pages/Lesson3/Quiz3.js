@@ -5,6 +5,7 @@ const Quiz3 = () => {
     return (
         <section className="Quiz3">
             <Navbar />
+            <h1>This is Quiz 3</h1>
         </section>
     )
 }
