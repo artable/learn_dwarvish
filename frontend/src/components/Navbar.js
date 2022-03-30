@@ -5,7 +5,7 @@ import './Navbar.css'
 const Navbar = () => {
   return (
     <section className='navbar'>
-      <body>
+      <section>
         <h1 className='header'>Navigation</h1>
 
         <ul>
@@ -13,7 +13,7 @@ const Navbar = () => {
           <li><Link to='/about-us'>About us</Link></li>
           <li><Link to='/contact'>Contact</Link></li>
         </ul>
-      </body>
+      </section>
     </section>
   );
 }
