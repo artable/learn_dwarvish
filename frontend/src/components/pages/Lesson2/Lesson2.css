@@ -1,0 +1,14 @@
+
+.link-quiz2 {
+    text-decoration: none;
+    background-color: #333333;
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+}
+
+.link-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

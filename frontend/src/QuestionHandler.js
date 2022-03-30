@@ -92,8 +92,8 @@ class QuestionHandler extends Component {
     return (
       <div>
         <Answer
-          question={this.state.activeItem.cirth}
-          answer={this.state.activeItem.english}
+          question={this.state.activeItem.english}
+          answer={this.state.activeItem.cirth}
           dummy={this.state.activeItem.dummy}
           callback={this.childCallback}
         />

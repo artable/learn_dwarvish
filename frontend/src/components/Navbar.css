@@ -4,7 +4,8 @@ ul {
     padding: 0;
     overflow: hidden;
     background: #333333;
-    width:2000px;
+    border-radius: 8px;
+
     /* color: antiquewhite; */
 }
 
@@ -27,4 +28,9 @@ li a:hover {
 
 h1.header  {
     font-size: 30px;
+}
+
+.header-box {
+    display: flex;
+    justify-content: center;
 }

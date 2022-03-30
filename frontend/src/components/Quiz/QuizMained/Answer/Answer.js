@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import './Answer.css'
 
 class Answer extends Component {
   constructor(props) {
@@ -33,13 +34,13 @@ class Answer extends Component {
   answerList() {
     const arrayList = [];
     arrayList.push(
-      <button onClick={this.props.callback} value={true}>
+      <button className='answer' onClick={this.props.callback} value={true}>
         {this.props.answer}
       </button>
     );
     for (let i = 0; i < this.props.dummy.length; i++) {
       arrayList.push(
-        <button onClick={this.props.callback} value={false}>
+        <button className='answer' onClick={this.props.callback} value={false}>
           {this.props.dummy[i]}
         </button>
       );
@@ -55,7 +56,7 @@ class Answer extends Component {
     //console.log(value);
     //console.log(this.props.answer);
     if (value == this.props.answer) {
-      return true;
+      return <h1>That is Correct</h1>
     } else {
       return false;
     }
@@ -64,13 +65,18 @@ class Answer extends Component {
 
     return (
       <div>
-        <div>
+        <div className='text-info'>
           What is this character in Cirth?
           <h3>
           {this.props.question}
           </h3>
-          </div>
-        {this.answerList()}
+        </div>
+        <div className='answer-list'>
+          {this.answerList()}
+        </div>
+        <div>
+          {this.isCorrect()}
+        </div>
       </div>
     );
   }
