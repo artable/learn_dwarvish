@@ -1,3 +1,5 @@
+import J from '../../assets/images/J.png';
+
 const L2Teach = () => {
     return (
         <div className='content-wrap'>
@@ -36,7 +38,7 @@ const L2Teach = () => {
                 is used in the language.
 
             </p>
-            <img class= "original" src = "assets/images/J.png" alt= "Original J"/>
+        <img class= "original" src ={J} alt= "Original J"/>
         </div>
     );
 }

@@ -1,4 +1,5 @@
 import './L1Teach.css';
+import O from '../../assets/images/O.png'
 
 const L1Teach = () => {
     return (
@@ -34,7 +35,7 @@ const L1Teach = () => {
                 O is represented by the character "&#x16A3;". Below is the actual character that
                 is used in the language.
             </p>
-            <img class= "original" src='../../assets/images/O.png' alt= "Original O"/>
+            <img class= "original" src={O} alt= "Original O"/>
             <p>
                 Do your best to review these characters before moving on. This First quiz is a 
                 memory game of sorts. Have fun and good luck!

@@ -16,7 +16,9 @@ class Quiz1 extends Component {
                 <Navbar />
                 <h1 className='header-quiz'>Quiz 1</h1>
                 <QuestionHandler api={"api/all"}/>
-                <Link to='/lesson2'>Go to Lesson 2</Link>
+                <div className='link-box'>
+                    <Link className='link-quiz1' to='/lesson2'>Go to Lesson 2</Link>
+                </div>
             </section>
         )
     }

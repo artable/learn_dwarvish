@@ -56,7 +56,7 @@ class Answer extends Component {
     //console.log(value);
     //console.log(this.props.answer);
     if (value == this.props.answer) {
-      return <h1>That is Correct</h1>
+      return true;
     } else {
       return false;
     }
@@ -73,9 +73,6 @@ class Answer extends Component {
         </div>
         <div className='answer-list'>
           {this.answerList()}
-        </div>
-        <div>
-          {this.isCorrect()}
         </div>
       </div>
     );

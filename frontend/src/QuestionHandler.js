@@ -22,7 +22,7 @@ class QuestionHandler extends Component {
 
   async componentDidMount() {
     try {
-      const res = await fetch("http://localhost:8000/api/all");
+      const res = await fetch("http://localhost:8000/api/vowels");
       const charList = await res.json();
       //TODO this is hecka gross and should be factored into a seperate method
       //even if initialization has to be handled seperate everytime

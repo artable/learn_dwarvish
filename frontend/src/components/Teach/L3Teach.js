@@ -1,3 +1,7 @@
+import S from '../../assets/images/S.png'
+import V from '../../assets/images/V.png';
+import W from '../../assets/images/W.png'
+
 const L3Teach = () => {
     return (
         <div className='content-wrap'>
@@ -35,19 +39,19 @@ const L3Teach = () => {
                 S is represented by the character "&#x16B2;". Below is the actual character that
                 is used in the language.
             </p>
-            <img class= "original" src = "/assets/images/S.png" alt= "Original S"/>
+            <img class= "original" src={S} alt= "Original S"/>
             
             <p>
                 V is represented by the character "&#x16D5;". Below is the actual character that
                 is used in the language.
             </p>
-            <img class= "original" src = "/assets/images/V.png" alt= "Original V"/>
+            <img class= "original" src={V} alt= "Original V"/>
             
             <p>
                 W is represented by the character "&#x16C4;". Below is the actual character that
                 is used in the language.
             </p>
-            <img class= "original" src = "assets/images/W.png" alt= "Original W"/>
+            <img class= "original" src={W} alt= "Original W"/>
         </div>
     );
 }
