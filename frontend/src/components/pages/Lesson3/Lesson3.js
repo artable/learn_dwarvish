@@ -8,7 +8,9 @@ const Lesson3 = () => {
         <section className="Lesson3">
             <Navbar />
             <L3Teach />
-            <Link to='/quiz3'>Go to Quiz 3</Link>
+            <div className='link-box'>
+                <Link className='link-quiz2' to='/quiz3'>Go to Quiz 3</Link>
+            </div>
         </section>
     )
 }
