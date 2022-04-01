@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Answer from './components/Quiz/QuizMained/Answer/Answer'
+import Scorecard from './components/Quiz/QuizMained/Answer/Scorecard';
 
 class QuestionHandler extends Component {
   constructor(props) {
@@ -7,6 +8,7 @@ class QuestionHandler extends Component {
     this.showNext = this.showNext.bind(this);
     this.createDummy = this.createDummy.bind(this);
     this.returnScore = this.returnScore.bind(this);
+    this.renderView = this.renderView.bind(this);
     console.log(this.props.api)
 
     this.state = {
@@ -16,7 +18,8 @@ class QuestionHandler extends Component {
         cirth: '',
         dummy: [],
       },
-      charList: props.charList
+      charList: props.charList,
+      quizCompleted: false,
       };
   }
 
@@ -53,7 +56,7 @@ class QuestionHandler extends Component {
   };
   showNext() {
     if (this.state.activeItem.index >= this.state.charList.length - 1) {
-      this.returnScore();
+      this.state.quizCompleted = true;
     } else {
       let next = this.state.charList[this.state.activeItem.index + 1];
       let newActiveItem = {
@@ -83,20 +86,30 @@ class QuestionHandler extends Component {
         correctAmount += 1;
       }
     }
-    incorrectAmount = 37 - correctAmount;
+    incorrectAmount = this.state.charList.length - correctAmount;
+    console.log("correct amount: ", correctAmount, "incorrect amount: ", incorrectAmount);
     return [correctAmount, incorrectAmount];
+  }
+
+  renderView(props) {
+    const quizCompleted = this.state.quizCompleted;
+    if (quizCompleted) {
+      return <Scorecard score={this.returnScore()}/>
+    } else {
+      return <Answer 
+        question={this.state.activeItem.english}
+        answer={this.state.activeItem.cirth}
+        dummy={this.state.activeItem.dummy}
+        callback={this.childCallback}
+        />
+}
   }
 
   render() {
     console.log(this.state.charList);
     return (
       <div>
-        <Answer
-          question={this.state.activeItem.english}
-          answer={this.state.activeItem.cirth}
-          dummy={this.state.activeItem.dummy}
-          callback={this.childCallback}
-        />
+        {this.renderView()}
       </div>
     );
   }
