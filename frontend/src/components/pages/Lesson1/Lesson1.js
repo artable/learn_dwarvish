@@ -3,6 +3,7 @@ import Navbar from '../../Navbar';
 import { Link } from "react-router-dom";
 import L1Teach from '../../Teach/L1Teach';
 import './Lesson1.css';
+
 // frontend\src\components\Teach\L1Teach.js
 
 const Lesson1 = () => {

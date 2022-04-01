@@ -18,6 +18,10 @@ from django.urls import path, include
 from rest_framework import routers
 from dwarvish_app import views
 
+''' These routers specify unique urls at which different sets of characters
+    from the database can be pulled.
+'''
+
 all_chars_r = routers.DefaultRouter()
 all_chars_r.register(r'all',views.CharAll, 'all')
 

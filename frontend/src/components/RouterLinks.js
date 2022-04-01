@@ -2,22 +2,19 @@ import React from "react"
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-
 import Lesson1 from "./pages/Lesson1/Lesson1";
 import Quiz1 from "./pages/Lesson1/Quiz1";
-
 import Lesson2 from "./pages/Lesson2/Lesson2";
 import Quiz2 from "./pages/Lesson2/Quiz2";
-
 import Lesson3 from "./pages/Lesson3/Lesson3";
 import Quiz3 from "./pages/Lesson3/Quiz3";
-
 import { 
   BrowserRouter as Router, 
   Route, 
   Routes
 } from "react-router-dom";
  
+// specifies unique urls for each page component
 const RouterLinks = () => {
   return (
     <Router>
