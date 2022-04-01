@@ -7,7 +7,7 @@ class QuestionHandler extends Component {
     this.showNext = this.showNext.bind(this);
     this.createDummy = this.createDummy.bind(this);
     this.returnScore = this.returnScore.bind(this);
-    console.log(this.props.api)
+    console.log(this.props.charList)
 
     this.state = {
       activeItem: {
@@ -20,24 +20,24 @@ class QuestionHandler extends Component {
       };
   }
 
-  async componentDidMount() {
-    try {
-      const res = await fetch("http://localhost:8000/api/vowels");
-      const charList = await res.json();
-      //TODO this is hecka gross and should be factored into a seperate method
-      //even if initialization has to be handled seperate everytime
-      this.setState({ charList });
-      let activeItem = {};
-      activeItem.english = charList[0].english;
-      activeItem.cirth = charList[0].dwarvish;
-      activeItem.index = 0;
-      activeItem.dummy = [this.createDummy(), this.createDummy()];
-      this.setState({ activeItem });
-    } catch (e) {
-      console.log(e);
-      console.log(this.state);
-    }
-  }
+  // async componentDidMount() {
+  //   try {
+  //     const res = await fetch("http://localhost:8000/api/vowels");
+  //     const charList = await res.json();
+  //     //TODO this is hecka gross and should be factored into a seperate method
+  //     //even if initialization has to be handled seperate everytime
+  //     this.setState({ charList });
+  //     let activeItem = {};
+  //     activeItem.english = charList[0].english;
+  //     activeItem.cirth = charList[0].dwarvish;
+  //     activeItem.index = 0;
+  //     activeItem.dummy = [this.createDummy(), this.createDummy()];
+  //     this.setState({ activeItem });
+  //   } catch (e) {
+  //     console.log(e);
+  //     console.log(this.state);
+  //   }
+  // }
 
   createDummy() {
     return this.state.charList[
