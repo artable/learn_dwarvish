@@ -12,7 +12,9 @@ function About () {
   return (
     <section className="About">
       <Navbar />
-      <h1>This is the about page</h1>
+      <h1>About us</h1>
+      <div>This web app was developed by a group of five people who love Tolkien and think Cirth is pretty cool.</div>
+      <div>We are all aspiring software developers who thought learning how to make web apps was a good idea for some insane reason.</div>
     </section>
   );
 };
