@@ -9,6 +9,9 @@ def lesson_index(request):
 def index(request):
     return render(request, 'lesson1/index.html', {})
 
+
+''' These viewsets use the serializer and query the db to return a specific charset
+'''
 class CharAll(viewsets.ModelViewSet) :
     serializer_class = serializers.EngCirthSerializer
     queryset = Char.objects.all()

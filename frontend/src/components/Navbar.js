@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import './Navbar.css'
 
+// pre-packaged navbar component to go at the top of every page component
+// includes links to each page url
 const Navbar = () => {
   // const aboutUsApi = 'api/about-us'
   return (
